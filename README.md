@@ -1,6 +1,6 @@
 # Generate MP4 links via the Brightcove Playback API!
 
-Requires Flask, Python 3, some modules listed in the file.
+Requires Python 3, Flask, Pyyaml, and some modules listed in the file.
 
 ## Configuration
 Create a "config.yml" file (use the sampleConfig.yml file as a template) to set a default account ID and policy key for when they're not passed.
@@ -21,7 +21,7 @@ That's it, easy peasy!
 
 ## To Do
 1. Code comments
-2. Maybe some tweaks like sorting the response if there is more than one MP4*, 
+2. Maybe some tweaks like sorting the response if there is more than one MP4* 
 3. But that's about all I'm gonna do with this. It's a POC.
 9. Learn Python cos I'm bad at it.
 
