@@ -1,5 +1,25 @@
-# Generate MP4 links via the Brightcove Playback API!
+# Retrieve MP4 links via the Brightcove Playback API
 
+## What is it?
+Access the publc Playback API, parses the JSON and returns just the MP4 link. This does not do anything that isn't possible today, it just makes it a bit easier.
+
+In other words it turns something like this:   
+```
+curl "https://edge.api.brightcove.com/playback/v1/accounts/123456789001/videos/987654321001" \
+-H 'Content-Type: application/json' \
+-H 'Accept: application/json;pk=LONG_POLICY_KEY_GOES_HERE' \
+| jq -r '.sources[] | select(.container=="MP4") | .src'
+```
+
+To:   
+```
+https://server.com/video/987654321001
+```
+
+Why would you want this? A good use case would be to provide non-technical end-users with an MP4 link.
+
+## Requirements
+An active Brightcove account.
 Requires Python 3, Flask, Pyyaml, and some modules listed in the file.
 
 ## Configuration
