@@ -46,7 +46,7 @@ def return_mp4_link(video_id):
                 app.logger.info("Current Item: %s", item)
                 if "container" in item:
                     app.logger.info("Item Found: %s", item)
-                    return(item['src'])
+                    return(item['src'].replace("http:", "https:"))
         elif response.status_code == 404:
             return("Video not found.")
         elif response.status_code == 403:
